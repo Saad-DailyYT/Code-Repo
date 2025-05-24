@@ -1,3 +1,19 @@
+--------------------------------------Brute Force---------------------------------------------------
+class Solution {
+    public static int sumSubstrings(String s) {
+        int n = s.length();
+        
+        int sum = 0;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<=n; j++){
+                sum += Integer.parseInt(s.substring(i, j));
+            }
+        }
+        return sum;
+    }
+}
+
+--------------------------------------Optimal Approach using Queue----------------------------------
 class Solution {
     
     static class Pair{
